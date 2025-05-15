@@ -1,0 +1,10 @@
+{
+    "C_Cpp.codeFolding": "enabled",
+    "files.associations": {
+        "func.h": "c",
+        "pid.h": "c",
+        "stm32f407xx.h": "c",
+        "main.h": "c",
+        "tim.h": "c"
+    }
+}

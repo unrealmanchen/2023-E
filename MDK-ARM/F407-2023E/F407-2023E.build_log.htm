@@ -1,0 +1,103 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: chen rc, LOKI, LIC=ZB4EI-TS04P-NN2AF-6UCPI-FH8EK-R78BU
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+d:\Code\stm32\F407-2023E\MDK-ARM\F407-2023E.uvprojx
+Project File Date:  04/26/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'F407-2023E'
+compiling main.c...
+../Users/PID.h(23): warning:  #1295-D: Deprecated declaration reset - give arg types
+  void reset();
+../Users/tft/tft.h(88): warning:  #1295-D: Deprecated declaration tft_init - give arg types
+  void tft_init();
+../Users/tft/tft.h(89): warning:  #1295-D: Deprecated declaration open_backlight - give arg types
+  void open_backlight();
+../Users/tft/tft.h(90): warning:  #1295-D: Deprecated declaration close_backlight - give arg types
+  void close_backlight();
+../Users/func.h(3): warning:  #1-D: last line of file ends without a newline
+  void draw(int);
+../Core/Src/main.c(191): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+      HAL_UART_Transmit(&huart2,string1,strlen(string1),1000);
+../Core/Src/main.c(304): warning:  #1182-D: a declaration cannot have a label
+          char buffer123='R';
+../Core/Src/main.c(305): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+          HAL_UART_Transmit(&huart2,&buffer123,1,1000);
+../Core/Src/main.c(310): warning:  #1182-D: a declaration cannot have a label
+            char str_ssd1[20]="MODE 0";
+../Core/Src/main.c(314): warning:  #1182-D: a declaration cannot have a label
+            char str_ssd2[20]="MODE 1";
+../Core/Src/main.c(318): warning:  #1182-D: a declaration cannot have a label
+            char str_ssd3[20]="MODE 2";
+../Core/Src/main.c(307): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "str_ssd1"  (declared at line 310)
+            variable "str_ssd2"  (declared at line 314)
+            variable "str_ssd3"  (declared at line 318)
+          switch (mode)
+          ^
+../Core/Src/main.c(324): warning:  #520-D: initialization with "{...}" expected for aggregate object
+          char a[2]=0;
+../Core/Src/main.c(326): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+          HAL_UART_Transmit(&huart2,a,1,1000);
+../Core/Src/main.c(348): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const uint8_t *"
+          HAL_UART_Transmit(&huart2,&buffer1,1,1000);
+../Core/Src/main.c(288): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "buffer123"  (declared at line 304)
+            variable "a"  (declared at line 324)
+            variable "buffer1"  (declared at line 347)
+        switch (temp)
+        ^
+../Core/Src/main.c(251): warning:  #550-D: variable "calcu_flag"  was set but never used
+    int calcu_flag=0;
+../Core/Src/main.c: 17 warnings, 0 errors
+linking...
+Program Size: Code=18000 RO-data=9272 RW-data=216 ZI-data=12296  
+FromELF: creating hex file...
+"F407-2023E\F407-2023E.axf" - 0 Error(s), 17 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_F407-2023E
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

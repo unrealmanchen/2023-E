@@ -1,0 +1,27 @@
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'F407-2023E'
+compiling main.c...
+../Core/Src/main.c(63): error:  #20: identifier "UART_X" is undefined
+  UART_X UART_cam={0},UART_PC={0},UART_Mot={0};
+../Core/Src/main.c(77): error:  #20: identifier "UART_X" is undefined
+    UART_X *UART_temp = NULL;
+../Core/Src/main.c(77): error:  #20: identifier "UART_temp" is undefined
+    UART_X *UART_temp = NULL;
+../Core/Src/main.c(99): error:  #20: identifier "BUFFER_SIZE" is undefined
+    if (UART_temp->buffer_pi > BUFFER_SIZE-2)
+../Core/Src/main.c(154): warning:  #223-D: function "strlen" declared implicitly
+        HAL_UART_Transmit(&huart2, (uint8_t *)UART_Mot.buffer, strlen(UART_Mot.buffer), 1000);
+../Core/Src/main.c(159): warning:  #223-D: function "strlen" declared implicitly
+        HAL_UART_Transmit(&huart3, (uint8_t *)UART_PC.buffer, strlen(UART_PC.buffer), 1000);
+../Core/Src/main.c(164): warning:  #223-D: function "strlen" declared implicitly
+        HAL_UART_Transmit(&huart2, (uint8_t *)UART_cam.buffer, strlen(UART_cam.buffer), 1000);
+../Core/Src/main.c(165): warning:  #223-D: function "sscanf" declared implicitly
+        sscanf(UART_cam.buffer, "%d %d!",&dif[0],&dif[1]);
+../Core/Src/main.c(169): warning:  #223-D: function "calcu" declared implicitly
+        calcu(dif,rotation);
+../Core/Src/main.c(169): error:  #20: identifier "rotation" is undefined
+        calcu(dif,rotation);
+../Core/Src/main.c: 5 warnings, 5 errors
+"F407-2023E\F407-2023E.axf" - 5 Error(s), 5 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01
