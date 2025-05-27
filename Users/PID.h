@@ -5,6 +5,7 @@
 #define milis_time 40
 
 #include <string.h>
+#include "main.h"
 struct PID{
     float Kp;
     float Ki;

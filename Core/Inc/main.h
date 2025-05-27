@@ -63,7 +63,9 @@ extern "C" {
 #include "tft.h"
 #include "fonts.h"
 
+#define CYCLE_TIME 20
 #define BUFFER_SIZE 100
+
   typedef struct{
     uint8_t IQR_buffer;
     int RxFlag;

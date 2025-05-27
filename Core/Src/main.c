@@ -405,7 +405,7 @@ begin:
     // __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,rotation_green[1]);
     
    
-    if(Timer_counter>=20&&stopflag==0&&mode==1){//红色激光循迹
+    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==1){//红色激光循迹
       Timer_counter=0;
       calcu(dif,rotation_red,&PID_red);
       dif[0]=0;
@@ -415,7 +415,7 @@ begin:
      // HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 1000);
       //sprintf(sprintf_buffer, "%d %d \n", rotation[0], rotation[1]);
     }
-    if(Timer_counter>=20&&stopflag==0&&mode==2){//绿色激光跟随红色激光
+    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==2){//绿色激光跟随红色激光
       Timer_counter=0;
       calcu(dif,rotation_red,&PID_red);
       calcu(dif_dot,rotation_green,&PID_green);

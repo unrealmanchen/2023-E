@@ -1,9 +1,10 @@
 #include "PID.h"
+
 #ifndef PID13
 #define PID13
 #define error 0
 int calcu_tran[2];
-float cal_time = 10;
+float cal_time = CYCLE_TIME; // it should be better when set to 10 for PID
 float calcu_result[2]={0,0};
 
 
