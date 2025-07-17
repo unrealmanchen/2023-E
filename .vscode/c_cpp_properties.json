@@ -17,21 +17,20 @@
         },
         {
             "name": "F407-2023E",
-            "cStandard": "c11",
-            "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-arm",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}",
             "includePath": [
-                "${workspaceFolder}/**",
-                "C:\\Keil_v5\\ARM\\ARMCC\\include",
-                "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
-                "..\\Core\\Inc",
-                "..\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "..\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "..\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "..\\Drivers\\CMSIS\\Include",
-                "..\\Users",
-                "..\\Users\\ssd1306",
-                "..\\Users\\tft"
+                "C:/Keil_v5/ARM/ARMCC/include",
+                "C:/Keil_v5/ARM/ARMCC/include/rw",
+                "Core/Inc",
+                "Drivers/STM32F4xx_HAL_Driver/Inc",
+                "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "Drivers/CMSIS/Include",
+                "Users",
+                "Users/ssd1306",
+                "Users/tft"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
@@ -108,10 +107,6 @@
                 "__wfi()=",
                 "__yield()=",
                 "__vfp_status(x,y)=0"
-            ],
-            "compilerPath": "C:\\Keil_v5\\UV4\\UV4.exe",
-            "compilerArgs": [
-                "--target=arm-arm-none-eabi"
             ]
         }
     ],

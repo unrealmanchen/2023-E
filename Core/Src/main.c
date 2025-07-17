@@ -101,7 +101,7 @@ void delay_ms(uint16_t nms)
     SysTick->VAL =0X00; 
 }
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)//1ms计时器 pid运算用
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)//1ms计时�? pid运算�?
 {
 
 	if(htim->Instance == TIM1)
@@ -112,7 +112,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)//1ms计时器 pid运
 }
 /*
   UART1--电脑通信
-  UART2--树莓派通信
+  UART2--树莓派�?�信
   UART3没用 
 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)//串口回调
@@ -278,8 +278,8 @@ int main(void)
   {
     /*
     前部分内容时解析串口数据
-    串口数据格式为 #M X Y!
-    M代表解析模式 1、2、3、4、5
+    串口数据格式�? #M X Y!
+    M代表解析模式 1�?2�?3�?4�?5
     XY分别为整数型数据
     */
     if (UART_Mot.RxFlag == 1)
@@ -307,7 +307,7 @@ int main(void)
       case 4:
         rotation_green[1] = buffer;
         break;
-      case 5://切换模式 格式 #5 x! x代表模式几
+      case 5://切换模式 格式 #5 x! x代表模式�?
         char buffer123='R';
         HAL_UART_Transmit(&huart2,&buffer123,1,1000);//告诉opencv重新寻找矩形
         mode=buffer;
@@ -405,7 +405,7 @@ begin:
     // __HAL_TIM_SET_COMPARE(&htim2,TIM_CHANNEL_2,rotation_green[1]);
     
    
-    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==1){//红色激光循迹
+    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==1){//红色�?光循�?
       Timer_counter=0;
       calcu(dif,rotation_red,&PID_red);
       dif[0]=0;
@@ -415,7 +415,7 @@ begin:
      // HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 1000);
       //sprintf(sprintf_buffer, "%d %d \n", rotation[0], rotation[1]);
     }
-    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==2){//绿色激光跟随红色激光
+    if(Timer_counter>=CYCLE_TIME&&stopflag==0&&mode==2){//绿色�?光跟随红色激�?
       Timer_counter=0;
       calcu(dif,rotation_red,&PID_red);
       calcu(dif_dot,rotation_green,&PID_green);

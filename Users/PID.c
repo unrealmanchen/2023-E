@@ -49,7 +49,7 @@ int * calcu(int *value,int *rotation,PID_ptr PID_data){
 
         
         calcu_result[i] = PID_data->Kp * PID_data->PID_recent[i] / cal_time + PID_data->Kd * (PID_data->PID_recent[i] - PID_data->PID_last[i]) / cal_time;
-        if (temp >= -20 || temp <= 20)//积分运算
+        if (temp >= -20 && temp <= 20)//积分运算
         {
             PID_data->PID_I_sum[i] += PID_data->PID_recent[i];
             if (PID_data->PID_I_sum[i] > 500)

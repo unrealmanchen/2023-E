@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "f407-2023e\startup_stm32f407xx.o"
 "f407-2023e\main.o"
 "f407-2023e\gpio.o"
